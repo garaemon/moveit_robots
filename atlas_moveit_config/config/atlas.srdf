@@ -25,28 +25,77 @@
         <joint name="l_arm_uwy" />
         <joint name="l_arm_mwx" />
     </group>
-    <group name="right_arm_torso">
-        <joint name="r_arm_usy" />
-        <joint name="r_arm_shx" />
-        <joint name="r_arm_ely" />
-        <joint name="r_arm_elx" />
-        <joint name="r_arm_uwy" />
-        <joint name="r_arm_mwx" />
+    <group name="right_leg">
+        <joint name="r_leg_kny" />
+        <joint name="r_leg_lax" />
+        <joint name="r_leg_lhy" />
+        <joint name="r_leg_mhx" />
+        <joint name="r_leg_uay" />
+        <joint name="r_leg_uhz" />
+    </group>
+    <group name="left_leg">
+        <joint name="l_leg_kny" />
+        <joint name="l_leg_lax" />
+        <joint name="l_leg_lhy" />
+        <joint name="l_leg_mhx" />
+        <joint name="l_leg_uay" />
+        <joint name="l_leg_uhz" />
+    </group>
+    <group name="torso">
         <joint name="back_lbz" />
         <joint name="back_mby" />
         <joint name="back_ubx" />
+    </group>
+    <group name="base">
+        <joint name="world_joint" />
+    </group>
+    <!-- -->
+    <group name="right_arm_base">
+        <group name="right_arm" />
+        <group name="base" />
+    </group>
+    <group name="right_arm_torso">
+        <group name="right_arm" />
+        <group name="torso" />
     </group>
     <group name="left_arm_torso">
-        <joint name="l_arm_usy" />
-        <joint name="l_arm_shx" />
-        <joint name="l_arm_ely" />
-        <joint name="l_arm_elx" />
-        <joint name="l_arm_uwy" />
-        <joint name="l_arm_mwx" />
-        <joint name="back_lbz" />
-        <joint name="back_mby" />
-        <joint name="back_ubx" />
+        <group name="right_arm" />
+        <group name="torso" />
     </group>
+    <group name="arms">
+        <group name="left_arm" />
+        <group name="right_arm" />
+    </group>
+    <group name="arms_base">
+        <group name="arms" />
+        <group name="base" />
+    </group>
+    <group name="legs">
+        <group name="left_leg" />
+        <group name="right_leg" />
+    </group>
+    <group name="legs_base">
+        <group name="base" />
+        <group name="legs" />
+    </group>
+    <group name="upper_body_fixed">
+        <group name="arms" />
+        <group name="torso" />
+    </group>
+    <group name="upper_body">
+        <group name="base" />
+        <group name="upper_body_fixed" />
+    </group>
+    <group name="whole_body_fixed">
+        <group name="arms" />
+        <group name="legs" />
+        <group name="torso" />
+    </group>
+    <group name="whole_body">
+        <group name="base" />
+        <group name="whole_body_fixed" />
+    </group>
+    <!-- -->
     <group name="right_hand">
         <joint name="right_sandia_hand_joint" />
         <joint name="right_f0_base" />
@@ -122,6 +171,8 @@
     <end_effector name="left_gripper" parent_link="l_hand" group="left_hand" />
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="world_joint" type="floating" parent_frame="world" child_link="pelvis" />
+    <!--PASSIVE JOINT: Purpose: this element is used to mark joints that are not actuated-->
+    <passive_joint name="world_joint" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="head" link2="head_imu_link" reason="Adjacent" />
     <disable_collisions link1="head" link2="hokuyo_link" reason="Adjacent" />
