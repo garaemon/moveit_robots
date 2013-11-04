@@ -172,7 +172,7 @@
     <end_effector name="left_gripper" parent_link="l_hand" group="left_hand" />
     -->
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
-    <virtual_joint name="world_joint" type="floating" parent_frame="world" child_link="pelvis" />
+    <virtual_joint name="world_joint" type="floating" parent_frame="map" child_link="pelvis" />
     <!--PASSIVE JOINT: Purpose: this element is used to mark joints that are not actuated-->
     <passive_joint name="world_joint" />
     <passive_joint name="left_f0_j0" />
@@ -199,6 +199,19 @@
     <passive_joint name="right_f3_j0" />
     <passive_joint name="right_f3_j1" />
     <passive_joint name="right_f3_j2" />
+
+    <passive_joint name="pre_spindle_cal_x_joint" />
+    <passive_joint name="pre_spindle_cal_y_joint" />
+    <passive_joint name="pre_spindle_cal_z_joint" />
+    <passive_joint name="pre_spindle_cal_roll_joint" />
+    <passive_joint name="pre_spindle_cal_pitch_joint" />
+    <passive_joint name="pre_spindle_cal_yaw_joint" />
+    <passive_joint name="post_spindle_cal_x_joint" />
+    <passive_joint name="post_spindle_cal_y_joint" />
+    <passive_joint name="post_spindle_cal_z_joint" />
+    <passive_joint name="post_spindle_cal_roll_joint" />
+    <passive_joint name="post_spindle_cal_pitch_joint" />
+    <passive_joint name="post_spindle_cal_yaw_joint" />
 
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="head" link2="head_imu_link" reason="Adjacent" />
