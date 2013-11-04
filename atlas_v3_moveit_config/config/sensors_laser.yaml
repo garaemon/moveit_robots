@@ -1,0 +1,5 @@
+sensors:
+  - sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+    point_cloud_topic: /laser/full_cloud2
+    max_range: 2.0
+    min_range: 0.5
