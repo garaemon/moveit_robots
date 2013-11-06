@@ -5,9 +5,8 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
-        - /PointCloud21
       Splitter Ratio: 0.74256
-    Tree Height: 391
+    Tree Height: 436
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -326,58 +325,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          post_spindle:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          post_spindle_cal_pitch:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          post_spindle_cal_roll:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          post_spindle_cal_x:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          post_spindle_cal_y:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          post_spindle_cal_z:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          pre_spindle:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          pre_spindle_cal_pitch:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          pre_spindle_cal_roll:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          pre_spindle_cal_x:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          pre_spindle_cal_y:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          pre_spindle_cal_yaw:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          pre_spindle_cal_z:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
           r_clav:
             Alpha: 1
             Show Axes: false
@@ -640,7 +587,7 @@ Visualization Manager:
       Planning Scene Topic: /move_group/monitored_planning_scene
       Robot Description: robot_description
       Scene Geometry:
-        Scene Alpha: 0.9
+        Scene Alpha: 0.8
         Scene Color: 50; 230; 50
         Scene Display Time: 0.2
         Show Scene Geometry: true
@@ -929,58 +876,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          post_spindle:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          post_spindle_cal_pitch:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          post_spindle_cal_roll:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          post_spindle_cal_x:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          post_spindle_cal_y:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          post_spindle_cal_z:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          pre_spindle:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          pre_spindle_cal_pitch:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          pre_spindle_cal_roll:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          pre_spindle_cal_x:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          pre_spindle_cal_y:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          pre_spindle_cal_yaw:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          pre_spindle_cal_z:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
           r_clav:
             Alpha: 1
             Show Axes: false
@@ -1228,20 +1123,48 @@ Visualization Manager:
       Class: rviz/PointCloud2
       Color: 255; 255; 255
       Color Transformer: Intensity
-      Decay Time: 0
-      Enabled: true
+      Decay Time: 5
+      Enabled: false
       Max Color: 255; 255; 255
-      Max Intensity: 16416
+      Max Intensity: 0
       Min Color: 0; 0; 0
-      Min Intensity: 31
+      Min Intensity: 0
       Name: PointCloud2
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.01
-      Style: Flat Squares
-      Topic: /full_cloud2
+      Size (m): 0.05
+      Style: Spheres
+      Topic: /laser/moveit_used_cloud2
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 6
+      Enabled: true
+      Max Color: 255; 255; 255
+      Max Intensity: 0
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.02
+      Style: Spheres
+      Topic: /laser/tilt_cloud_filtered
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
@@ -1259,31 +1182,31 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 2.9965
+      Distance: 4.10001
       Focal Point:
-        X: 0.113567
-        Y: 0.10592
-        Z: 2.23518e-07
+        X: 0.512567
+        Y: -0.648943
+        Z: 1.17719e-06
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.534797
+      Pitch: 0.794797
       Target Frame: /map
       Value: XYOrbit (rviz)
-      Yaw: 1.95677
+      Yaw: 4.95674
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1024
+  Height: 1056
   Help:
     collapsed: false
   Hide Left Dock: false
   Hide Right Dock: false
   Motion Planning:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000002a2000003a1fc0200000005fb000000100044006900730070006c00610079007301000000410000021c000000dd00fffffffb0000000800480065006c00700000000342000000bb0000007600fffffffb0000000a0056006900650077007300000003b0000000b0000000b000fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e006701000002630000017f0000017400ffffff000004d8000003a100000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000002a2000003dafc0200000005fb000000100044006900730070006c006100790073010000002800000249000000dd00fffffffb0000000800480065006c00700000000342000000bb0000007600fffffffb0000000a0056006900650077007300000003b0000000b0000000b000fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e006701000002770000018b0000017f00ffffff000004d8000003da00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
   Width: 1920
   X: 0
-  Y: 27
+  Y: 24
