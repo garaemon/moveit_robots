@@ -170,6 +170,72 @@
         <joint name="left_palm_right_camera_frame_joint" />
         <joint name="left_palm_right_camera_optical_frame_joint" />
     </group>
+    <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values\
+. This is useful to define states like 'folded arms'-->
+    <group_state name="larm_up" group="left_arm">
+        <joint name="l_arm_elx" value="0" />
+        <joint name="l_arm_ely" value="1.606" />
+        <joint name="l_arm_shx" value="0" />
+        <joint name="l_arm_shy" value="0" />
+        <joint name="l_arm_wrx" value="0" />
+        <joint name="l_arm_wry" value="0" />
+    </group_state>
+    <group_state name="rarm_up" group="right_arm">
+        <joint name="r_arm_elx" value="0" />
+        <joint name="r_arm_ely" value="1.606" />
+        <joint name="r_arm_shx" value="0" />
+        <joint name="r_arm_shy" value="0" />
+        <joint name="r_arm_wrx" value="0" />
+        <joint name="r_arm_wry" value="0" />
+    </group_state>
+    <group_state name="rarm_front_up" group="right_arm">
+        <joint name="r_arm_elx" value="-1.006" />
+        <joint name="r_arm_ely" value="2.0473" />
+        <joint name="r_arm_shx" value="0.3353" />
+        <joint name="r_arm_shy" value="-0.7237" />
+        <joint name="r_arm_wrx" value="0" />
+        <joint name="r_arm_wry" value="0" />
+    </group_state>
+    <group_state name="larm_front_up" group="left_arm">
+        <joint name="l_arm_elx" value="1.006" />
+        <joint name="l_arm_ely" value="2.0473" />
+        <joint name="l_arm_shx" value="-0.3353" />
+        <joint name="l_arm_shy" value="-0.7237" />
+        <joint name="l_arm_wrx" value="0" />
+        <joint name="l_arm_wry" value="0" />
+    </group_state>
+    <group_state name="larm_walking" group="left_arm">
+        <joint name="l_arm_elx" value="1.9193" />
+        <joint name="l_arm_ely" value="2.2591" />
+        <joint name="l_arm_shx" value="-1.3943" />
+        <joint name="l_arm_shy" value="0.7853" />
+        <joint name="l_arm_wrx" value="-0.0397" />
+        <joint name="l_arm_wry" value="1.5708" />
+    </group_state>
+    <group_state name="rarm_walking" group="right_arm">
+        <joint name="r_arm_elx" value="-1.9193" />
+        <joint name="r_arm_ely" value="2.2591" />
+        <joint name="r_arm_shx" value="1.3943" />
+        <joint name="r_arm_shy" value="0.7853" />
+        <joint name="r_arm_wrx" value="-0.0397" />
+        <joint name="r_arm_wry" value="1.5708" />
+    </group_state>
+    <group_state name="init_larm" group="left_arm">
+        <joint name="l_arm_elx" value="0" />
+        <joint name="l_arm_ely" value="0" />
+        <joint name="l_arm_shx" value="-1.3061" />
+        <joint name="l_arm_shy" value="-0" />
+        <joint name="l_arm_wrx" value="0" />
+        <joint name="l_arm_wry" value="0" />
+    </group_state>
+    <group_state name="init_rarm" group="right_arm">
+        <joint name="r_arm_elx" value="0" />
+        <joint name="r_arm_ely" value="0" />
+        <joint name="r_arm_shx" value="1.2178" />
+        <joint name="r_arm_shy" value="0" />
+        <joint name="r_arm_wrx" value="0" />
+        <joint name="r_arm_wry" value="0" />
+    </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <!--
     <end_effector name="right_gripper" parent_link="r_hand" group="right_hand" />
