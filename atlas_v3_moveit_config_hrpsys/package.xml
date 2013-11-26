@@ -1,6 +1,6 @@
 <package>
 
-  <name>atlas_v3_moveit_config</name>
+  <name>atlas_v3_moveit_config_hrpsys</name>
   <version>0.2.0</version>
   <description>
      An automatically generated package with all the configuration and launch files for using the atlas with the MoveIt Motion Planning Framework

@@ -1,0 +1,9 @@
+sensors:
+  - sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+    point_cloud_topic: /laser/moveit_input_cloud2
+    max_range: 200.5
+    shape_offset: 0
+    shape_scale: 1.0
+    shape_padding: 0.06
+#    point_subsample: 1
+    filtered_cloud_topic: /laser/moveit_used_cloud2
